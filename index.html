@@ -15,6 +15,7 @@
             color: #333;
             font-family: 'Roboto', sans-serif;
             transition: background-color 0.3s, color 0.3s;
+            line-height: 1.6;
         }
 
         .dark-theme {
@@ -47,11 +48,14 @@
             font-size: 2.5rem;
             color: #4caf50;
             text-transform: uppercase;
+            margin-bottom: 30px;
         }
 
         p {
             font-size: 1.2rem;
             line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
         }
 
         .carousel {
@@ -69,6 +73,7 @@
             color: #fff;
             padding: 30px;
             text-align: center;
+            margin-top: 50px;
         }
 
         .theme-switch {
@@ -131,6 +136,25 @@
                 box-shadow: 0 0 5px #4caf50, 0 0 15px #4caf50;
             }
         }
+
+        /* Ajuste de espaçamento e tipografia para melhorar o design */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 i {
+            margin-right: 10px;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+
+        .section-padding {
+            padding: 80px 20px;
+        }
     </style>
 </head>
 
@@ -152,7 +176,7 @@
     </nav>
 
     <!-- Seção do Carrossel -->
-    <section id="home" class="section">
+    <section id="home" class="section section-padding">
         <div class="container">
             <h2 class="center-align">Bem-vindo à Gestão Ecológica</h2>
             <div class="carousel carousel-slider center">
@@ -170,10 +194,10 @@
     </section>
 
     <!-- Seção Quem Somos -->
-    <section id="quem-somos" class="section">
+    <section id="quem-somos" class="section section-padding">
         <div class="container">
             <h2><i class="material-icons left icon-large">people</i>Quem Somos</h2>
-            <p>Somos uma empresa comprometida com a gestão sustentável de resíduos, oferecendo soluções que promovem a reciclagem e a preservação do meio ambiente.</p>
+            <p>A CooKariri é uma cooperativa dedicada à gestão sustentável de resíduos. Atuamos com base nos valores do cooperativismo, promovendo soluções que incentivam a reciclagem e preservação ambiental. Nossa missão é melhorar as condições de trabalho e aumentar a renda dos catadores, além de contribuir para um futuro mais verde.</p>
 
             <!-- Três imagens da equipe ou empresa -->
             <div class="image-container">
@@ -186,10 +210,10 @@
     </section>
 
     <!-- Seção Como Trabalhamos -->
-    <section id="como-trabalhamos" class="section">
+    <section id="como-trabalhamos" class="section section-padding">
         <div class="container">
             <h2><i class="material-icons left icon-large">work</i>Como Trabalhamos</h2>
-            <p>Nossos processos são baseados em práticas sustentáveis, visando a redução de resíduos e a reutilização de materiais.</p>
+            <p>Nossas principais atividades incluem a coleta seletiva de resíduos, compra e venda de materiais recicláveis e soluções de logística reversa. Buscamos sempre promover a economia circular e o desenvolvimento sustentável.</p>
 
             <!-- Duas imagens do processo de trabalho -->
             <div class="image-container">
