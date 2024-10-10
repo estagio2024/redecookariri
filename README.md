@@ -1,0 +1,2 @@
+# redecookariri
+reciclagem de resíduos.
