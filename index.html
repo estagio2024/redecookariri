@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Gestão de Resíduos</title>
+    <!-- Importando Materialize CSS e Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        /* Estilo Ecológico */
+        body {
+            background-color: #e9f5e9;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-theme {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        nav {
+            background-color: #4caf50;
+            border-bottom: 2px solid #4caf50;
+        }
+
+        nav a {
+            font-size: 1.2rem;
+        }
+
+        .section {
+            padding: 60px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #4caf50;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .carousel {
+            height: 500px;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+
+        footer {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .theme-switch {
+            margin-left: auto;
+        }
+
+        .btn-custom {
+            background-color: #4caf50;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #388e3c;
+            box-shadow: 0px 0px 10px #4caf50, 0px 0px 20px #4caf50;
+        }
+
+        .icon-large {
+            font-size: 5rem;
+            color: #4caf50;
+        }
+
+        .image-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            border: 2px solid #4caf50;
+            box-shadow: 0px 0px 10px rgba(76, 175, 80, 0.5);
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Animação do botão de contato */
+        .btn-animate {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 5px #4caf50, 0 0 15px #4caf50;
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px #4caf50, 0 0 40px #4caf50;
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 5px #4caf50, 0 0 15px #4caf50;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#home" class="brand-logo">Gestão Ecológica</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#home"><i class="material-icons left">home</i>Home</a></li>
+                <li><a href="#quem-somos"><i class="material-icons left">people</i>Quem Somos</a></li>
+                <li><a href="#como-trabalhamos"><i class="material-icons left">work</i>Como Trabalhamos</a></li>
+                <li><a href="#" id="theme-switch" class="theme-switch">
+                    <i class="material-icons">brightness_4</i> Tema
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção do Carrossel -->
+    <section id="home" class="section">
+        <div class="container">
+            <h2 class="center-align">Bem-vindo à Gestão Ecológica</h2>
+            <div class="carousel carousel-slider center">
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/4caf50/ffffff?text=Imagem+1" alt="Imagem 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/81c784/ffffff?text=Imagem+2" alt="Imagem 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400/a5d6a7/ffffff?text=Imagem+3" alt="Imagem 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Quem Somos -->
+    <section id="quem-somos" class="section">
+        <div class="container">
+            <h2><i class="material-icons left icon-large">people</i>Quem Somos</h2>
+            <p>Somos uma empresa comprometida com a gestão sustentável de resíduos, oferecendo soluções que promovem a reciclagem e a preservação do meio ambiente.</p>
+
+            <!-- Três imagens da equipe ou empresa -->
+            <div class="image-container">
+                <img src="https://via.placeholder.com/300x200" alt="Equipe 1">
+                <img src="https://via.placeholder.com/300x200" alt="Equipe 2">
+                <img src="https://via.placeholder.com/300x200" alt="Equipe 3">
+                <p>Conheça nossa equipe dedicada ao futuro sustentável.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Como Trabalhamos -->
+    <section id="como-trabalhamos" class="section">
+        <div class="container">
+            <h2><i class="material-icons left icon-large">work</i>Como Trabalhamos</h2>
+            <p>Nossos processos são baseados em práticas sustentáveis, visando a redução de resíduos e a reutilização de materiais.</p>
+
+            <!-- Duas imagens do processo de trabalho -->
+            <div class="image-container">
+                <img src="https://via.placeholder.com/300x200" alt="Trabalho 1">
+                <img src="https://via.placeholder.com/300x200" alt="Trabalho 2">
+                <p>Implementamos soluções inovadoras para um mundo mais verde.</p>
+            </div>
+
+            <!-- Botão de Contato animado -->
+            <div class="center-align" style="margin-top: 40px;">
+                <a href="#" class="btn btn-custom btn-animate waves-effect waves-light">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Importando Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        // Inicializar o carrossel
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                indicators: true
+            });
+        });
+
+        // Função para alternar tema claro e escuro
+        const themeSwitch = document.getElementById('theme-switch');
+        themeSwitch.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+
+        // Animar as seções quando estiverem visíveis
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
